@@ -25,6 +25,7 @@ public class CommentController {
 	@Autowired
 	private PostService postService;
 	
+	//Needs to add Logger
 	
 	//Handler Method for Save Comments
 	@PostMapping("/{postUrl}/comments")
