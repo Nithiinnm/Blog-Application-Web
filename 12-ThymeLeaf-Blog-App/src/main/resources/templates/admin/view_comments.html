@@ -14,6 +14,7 @@
 				<th style="width:10%">S.No</th>
 				<th style="width:20%">Email</th>
 				<th style="width:30%">Comment</th>
+				<th style="width:20%">post title</th>
 				<th style="width:20%">Created Date</th>
 				<th style="width:20%">Actions</th>
 			</tr>
@@ -22,6 +23,7 @@
 				<td th:text="${commentStat.count}">1</td>
 				<td th:text="${comment.email}">Email</td>
 				<td th:text="${comment.content}">Comment</td>
+				<td th:text="${comment.post.title}">title</td>
 				<td th:text="${#temporals.format(comment.createdDate, 'dd-MMM-yyyy')}">Comment created date</td>
 				<td>
 					<a th:href="@{/admin/posts/comments/{commentId}(commentId=${comment.id})}" class="btn btn-danger">Delete</a>

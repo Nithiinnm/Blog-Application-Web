@@ -14,6 +14,7 @@ public class CommentMapper {
 							.content(comment.getContent())
 							.createdDate(comment.getCreatedDate())
 							.updatedDate(comment.getUpdatedDate())
+							.post(comment.getPost())
 							.build();
 			}
 		

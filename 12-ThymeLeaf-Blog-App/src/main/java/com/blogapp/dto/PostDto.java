@@ -5,6 +5,8 @@ import java.util.Set;
 
 import javax.validation.constraints.NotEmpty;
 
+import com.blogapp.entity.User;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,5 +28,6 @@ public class PostDto {
 	private String shortDescription;
 	private LocalDateTime createdDate;
 	private LocalDateTime updateDate;
+	private User createdBy;
 	private Set<CommentDto> comments;
 }

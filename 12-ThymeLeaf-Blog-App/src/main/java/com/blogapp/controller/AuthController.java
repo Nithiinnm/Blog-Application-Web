@@ -1,6 +1,6 @@
 package com.blogapp.controller;
 
-import java.util.Objects;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.blogapp.dto.RegisterDto;
+import com.blogapp.entity.Country;
 import com.blogapp.entity.User;
+import com.blogapp.repository.CountryRepository;
 import com.blogapp.service.UserService;
 
 @Controller
@@ -21,6 +23,10 @@ public class AuthController {
 	
 	@Autowired
 	private UserService userService;
+	
+
+	@Autowired
+	private CountryRepository countryRepository;
 
 	
 	
@@ -36,6 +42,8 @@ public class AuthController {
 		
 		RegisterDto user = new RegisterDto();
 		model.addAttribute("user", user);
+		List<Country> country=countryRepository.findAll();
+		model.addAttribute("countries", country);
 		return "register_form";
 	}
 	
