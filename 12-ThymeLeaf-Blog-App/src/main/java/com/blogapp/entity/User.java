@@ -1,7 +1,9 @@
 package com.blogapp.entity;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -13,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -46,5 +49,11 @@ public class User {
 			   joinColumns = {@JoinColumn(name="user_id" ,referencedColumnName = "id")},
 			   inverseJoinColumns = {@JoinColumn(name="role_id" ,referencedColumnName = "id")})
 	private List<Role> roles = new ArrayList<>();
+	
+	//no need to make it Bi-directional mapping
+	/*
+	 * @OneToMany(mappedBy = "createdBy",cascade = CascadeType.REMOVE) private
+	 * Set<Post> posts = new HashSet<>();
+	 */
 	
 }

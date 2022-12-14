@@ -18,7 +18,9 @@ public class PostMapper {
 									  .map((comment) -> CommentMapper.mapToCommentDto(comment))
 									  .collect(Collectors.toSet()))
 						.createdDate(post.getCreatedDate())
+						.createdBy(post.getCreatedBy())
 						.updateDate(post.getUpdateDate()).build();
+			
 		}
 	
 	//convert Post_Dto to Post Entity

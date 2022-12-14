@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
+import com.blogapp.entity.Post;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -31,6 +33,8 @@ public class CommentDto {
 	private String content;
 	
 	private LocalDateTime createdDate;
+	
+	private Post post;
 	
 	private LocalDateTime updatedDate;
 	

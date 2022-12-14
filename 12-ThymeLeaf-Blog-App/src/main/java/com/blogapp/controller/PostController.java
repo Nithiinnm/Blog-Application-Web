@@ -30,6 +30,7 @@ public class PostController {
 	@Autowired
 	private CommentService commentService;
 	
+	
 	public PostController(PostService postService) {
 		this.postService = postService;
 	}
