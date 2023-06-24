@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.blogapp.dto.CommentDto;
 import com.blogapp.dto.PostDto;
@@ -31,13 +30,8 @@ public class PostController {
 	@Autowired
 	private CommentService commentService;
 	
-	
 	public PostController(PostService postService) {
 		this.postService = postService;
-	}
-	@ResponseBody
-	public String getposts() {
-		return "sample check";
 	}
 	
 	//Create Handler method for Get Request and return Model and view
