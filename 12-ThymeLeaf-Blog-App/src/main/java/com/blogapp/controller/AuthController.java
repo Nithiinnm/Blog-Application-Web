@@ -36,7 +36,7 @@ public class AuthController {
 		
 		RegisterDto user = new RegisterDto();
 		model.addAttribute("user", user);
-		return "register_form";
+		return "register_form_Hi";
 	}
 	
 	//Handler method for Save registration

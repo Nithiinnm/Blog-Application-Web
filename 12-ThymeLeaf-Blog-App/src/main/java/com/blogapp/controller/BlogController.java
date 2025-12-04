@@ -30,7 +30,7 @@ public class BlogController {
 		List<PostDto> posts = postService.findAllPosts();
 		model.addAttribute("postResponse", posts);
 		System.out.println("post in Blog :" +posts);
-		return "blog/view_posts";
+		return "blog/view_posts_Hi";
 		
 	}
 	
