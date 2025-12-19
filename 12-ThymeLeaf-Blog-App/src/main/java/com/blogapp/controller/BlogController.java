@@ -52,4 +52,5 @@ public class BlogController {
 		return "blog/view_posts";
 	}
 
+	//Hnadler Method for SearchBlog
 }
